@@ -1,5 +1,4 @@
 require_relative 'bitmap'
-require 'byebug'
 
 class BitmapEditor
 
