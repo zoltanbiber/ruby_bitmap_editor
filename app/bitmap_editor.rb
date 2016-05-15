@@ -47,6 +47,9 @@ class BitmapEditor
     elsif args.any? { |a| a == 0 }
       @input_error = "None of the arguments can be 0."
       return false
+    elsif args.any? { |a| a > 250 if a.is_a?(Integer) }
+      @input_error = "Maximum bitmap size is 250x250."
+      return false
     elsif command == 'I' && (args.count != 2 || !args.all? {|a| a.is_a?(Integer)})
       @input_error = "Command 'I' should have 2 arguments (numbers) separated by spaces."
       return false
