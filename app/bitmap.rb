@@ -26,6 +26,7 @@ class Bitmap
 
 	def show
 		puts @pixels
+		puts "Bitmap size is #{@width}x#{height}."
 	end
 
 	private
@@ -38,6 +39,7 @@ class Bitmap
 			end
 			@pixels << "\n";
 		end
+		puts "#{width}x#{height} bitmap created."
 	end
 
 	def existing_pixel?(x, y)
